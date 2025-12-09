@@ -4,7 +4,7 @@ On the Interplay of Pre-Training, Mid-Training, and RL on Reasoning Language Mod
 
 <div align="center">
 
-<a href="https://chenlong-clock.github.io">Charlie Zhang</a>, <><a href="https://www.phontron.com">Graham Neubig</a>, 
+<a href="https://chenlong-clock.github.io">Charlie Zhang</a>, <a href="https://www.phontron.com">Graham Neubig</a>, 
 <a href="https://xiangyue9607.github.io">Xiang Yue</a>
 
 Carnegie Mellon University, Language Technologies Institute
@@ -39,12 +39,13 @@ Our paper builds a **fully controlled experimental framework** to analyze how **
 ## 🧠 Key findings
 <div align="center">
   <h1 align="center">
-    <img src="assets/findings.png" />
+    <img src="assets/findings.png" width="500" />
     </h1>
 </div>
 
 
-
+## Code and Data
+Code and data will be released very soon.
 
 ## 📚 Citation
 
