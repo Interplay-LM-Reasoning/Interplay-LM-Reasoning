@@ -1,0 +1,62 @@
+Metadata-Version: 2.4
+Name: verl
+Version: 0.5.0.dev0
+Summary: verl: Volcano Engine Reinforcement Learning for LLM
+Home-page: https://github.com/volcengine/verl
+Author: Bytedance - Seed - MLSys
+Author-email: zhangchi.usc1992@bytedance.com, gmsheng@connect.hku.hk
+License: Apache 2.0
+Description-Content-Type: text/markdown
+Requires-Dist: accelerate
+Requires-Dist: codetiming
+Requires-Dist: datasets
+Requires-Dist: dill
+Requires-Dist: hydra-core
+Requires-Dist: numpy<2.0.0
+Requires-Dist: pandas
+Requires-Dist: peft
+Requires-Dist: pyarrow>=19.0.0
+Requires-Dist: pybind11
+Requires-Dist: pylatexenc
+Requires-Dist: ray[default]>=2.41.0
+Requires-Dist: torchdata
+Requires-Dist: tensordict!=0.9.0,<=0.10.0,>=0.8.0
+Requires-Dist: transformers
+Requires-Dist: wandb
+Requires-Dist: packaging>=20.0
+Requires-Dist: tensorboard
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pre-commit; extra == "test"
+Requires-Dist: py-spy; extra == "test"
+Requires-Dist: pytest-asyncio; extra == "test"
+Provides-Extra: prime
+Requires-Dist: pyext; extra == "prime"
+Provides-Extra: geo
+Requires-Dist: mathruler; extra == "geo"
+Requires-Dist: torchvision; extra == "geo"
+Requires-Dist: qwen_vl_utils; extra == "geo"
+Provides-Extra: gpu
+Requires-Dist: liger-kernel; extra == "gpu"
+Requires-Dist: flash-attn; extra == "gpu"
+Provides-Extra: math
+Requires-Dist: math-verify; extra == "math"
+Provides-Extra: vllm
+Requires-Dist: tensordict!=0.9.0,<=0.10.0,>=0.8.0; extra == "vllm"
+Requires-Dist: vllm<=0.9.1,>=0.7.3; extra == "vllm"
+Provides-Extra: sglang
+Requires-Dist: tensordict!=0.9.0,<=0.10.0,>=0.8.0; extra == "sglang"
+Requires-Dist: sglang[openai,srt]==0.4.10.post2; extra == "sglang"
+Requires-Dist: torch==2.7.1; extra == "sglang"
+Provides-Extra: trl
+Requires-Dist: trl<=0.9.6; extra == "trl"
+Provides-Extra: mcore
+Requires-Dist: mbridge; extra == "mcore"
+Dynamic: author
+Dynamic: author-email
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: summary
