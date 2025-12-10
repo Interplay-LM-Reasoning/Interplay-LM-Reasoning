@@ -1,0 +1,25 @@
+{
+  "type": "byte_level_bpe+regex",
+  "pat_str": "\\\\[A-Za-z]+|\\\\.|\\\\begin\\s*\\{[A-Za-z*]+\\}|\\\\end\\s*\\{[A-Za-z*]+\\}|<=|>=|!=|:=|->|->>|=>|<=>|::=|==|\\\\to|\\\\mapsto|\\\\implies|\\\\iff|[±≈≅≃≡∼∝∞√∑∏∫∮∇∂∆∈∉⊂⊆⊄⊇⊃∩∪∧∨¬⇒⇔←→↦⟶⟨⟩⋯…]|[_^]|[{}()\\\\[\\\\]]|(?<![\\\\p{L}\\\\p{N}])\\\\p{N}{1,3}(?:[_,]\\\\p{N}{1,3})*(?:\\\\.\\\\p{N}+)?(?:[eE][+-]?\\\\p{N}+)?|-| ?\\\\p{L}+| ?[^\\\\s\\\\p{L}\\\\p{N}]+|\\\\s+(?!\\\\S)|\\\\s+",
+  "vocab_size": 5000,
+  "min_frequency": 2,
+  "limit_alphabet": 1000,
+  "max_token_length": 100,
+  "byte_level_add_prefix_space": false,
+  "special_tokens": [
+    "[UNK]",
+    "[PAD]",
+    "[BOS]",
+    "[EOS]",
+    "<question>",
+    "</question>",
+    "<solution>",
+    "</solution>",
+    "<answer>",
+    "</answer>"
+  ],
+  "bos_token": "[BOS]",
+  "eos_token": "[EOS]",
+  "corpus_source": "data/split/difficulty/zero_context_medium",
+  "num_training_lines": 25900587
+}

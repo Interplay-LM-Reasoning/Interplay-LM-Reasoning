@@ -1,0 +1,56 @@
+[build-system]
+requires = [
+  "setuptools>=61.0",
+  "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gsm-infinite"  # Choose a suitable name
+version = "0.2.0"  # Start with an initial version
+description = "GSM-Infinite Benchmark for LLMs"
+readme = "README.md"
+requires-python = ">=3.8"  # Specify minimum Python version
+license = {file = "LICENSE"}
+authors = [
+  {name = "Yang Zhou", email = "yangzho6@andrew.cmu.edu"},
+  {name = "Hongyi Liu", email = "liuhongy21@gmail.com"}, # Update with your information
+  {name = "Zhuoming Chen", email = "zhuominc@andrew.cmu.edu"},
+  {name = "Yuandong Tian", email = "yuandong@meta.com"},
+  {name = "Beidi Chen", email = "beidic@andrew.cmu.edu"},
+]
+keywords = ["LLM", "benchmark", "evaluation"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "openai>=1.0.0",
+    "nltk>=3.8.1",
+    "numpy>=1.24.0",
+    "tenacity>=8.2.3",
+    "datasets>=2.14.0",
+    "wonderwords>=2.2.0",
+    "tqdm>=4.65.0",
+    "pyyaml>=6.0.1",
+    "html2text",
+    "beautifulsoup4",
+    "spacy",
+    "tiktoken",
+    "anthropic",
+    "google-generativeai",
+    "termcolor",
+    "sympy",
+    "networkx",
+    "matplotlib",
+    "pydot",
+    "argparse"
+]
+
+[project.urls]
+"Homepage" = "https://infini-ai-lab.github.io/gsm_infinite" # Update with your repo URL
+"Bug Tracker" = "https://github.com/Infini-AI-Lab/gsm_infinite/issues" # Update with your issue tracker
+
+[tool.setuptools]
+packages = ["gsm-infinite"] # This assumes your main package is named gsm_infinite

@@ -1,0 +1,10 @@
+[UNK]
+[PAD]
+[BOS]
+[EOS]
+<question>
+</question>
+<solution>
+</solution>
+<answer>
+</answer>

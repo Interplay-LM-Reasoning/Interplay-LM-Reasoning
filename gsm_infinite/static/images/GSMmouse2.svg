@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  This SVG is meant to replicate the TikZ drawing:
+    \newcommand{\GSMmouse}{%
+      \begin{tikzpicture}[scale=0.25, line join=round, thick]
+         ... (your TikZ code) ...
+      \end{tikzpicture}%
+    }
+  The conversion does the following:
+    • Multiplies all coordinates by 0.25.
+    • Converts TikZ’s “ellipse” and “circle” commands to SVG’s <ellipse> and <circle>.
+    • Converts the Bezier “smile” (.. controls …) into an SVG <path>.
+    • Uses a wrapping <g> with a transform that flips the y–axis about the mid–line.
+  
+  (Colors: In TikZ “red!90” was approximated by “#FF1919”, “red!60” by “#FF6666”, “red!40” by “#FF9999” and “pink!60” by “#FFD9E1”.)
+-->
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="-0.45 -0.3 0.9 0.725"
+     width="300" height="242">
+  <!-- 
+       Our “scaled” drawing (all coordinates already multiplied by 0.25) 
+       runs from:
+         x: –0.45 to 0.45 
+         y: –0.3   to 0.425 
+       Since TikZ’s y–axis is upward, we wrap all elements in a group
+       that reflects vertically about the vertical midpoint (0.0625),
+       which we do by a translate+scale. (Here a simple equivalent is to
+       reflect about y = 0.0625 – but for our purposes we use a translate by 0.125.)
+  -->
+  <g transform="translate(0,0.125) scale(1,-1)">
+  
+    <!-- Body (an ellipse centered at (0,0) with rx=1.5*0.25=0.375, ry=1.2*0.25=0.3) -->
+    <ellipse cx="0" cy="0" rx="0.375" ry="0.3"
+             fill="none" stroke="black" stroke-width="0.02"/>
+
+    <!-- Ears (circles at (-1.2,1.1) and (1.2,1.1) scaled) -->
+    <circle cx="-0.3" cy="0.275" r="0.15"
+            fill="none" stroke="black" stroke-width="0.02"/>
+    <circle cx="0.3" cy="0.275" r="0.15"
+            fill="none" stroke="black" stroke-width="0.02"/>
+
+    <!-- Inner ears (pink rings, originally “pink!60”, here approximated by #FFD9E1) -->
+    <circle cx="-0.3" cy="0.275" r="0.1"
+            fill="none" stroke="#FFD9E1" stroke-width="0.03"/>
+    <circle cx="0.3" cy="0.275" r="0.1"
+            fill="none" stroke="#FFD9E1" stroke-width="0.03"/>
+
+    <!-- Eyes: white circles at (-0.5,0.3) and (0.5,0.3) scaled -->
+    <circle cx="-0.125" cy="0.075" r="0.0625"
+            fill="white" stroke="none"/>
+    <circle cx="0.125" cy="0.075" r="0.0625"
+            fill="white" stroke="none"/>
+    <!-- Pupils (black circles) -->
+    <circle cx="-0.125" cy="0.075" r="0.025"
+            fill="black" stroke="none"/>
+    <circle cx="0.125" cy="0.075" r="0.025"
+            fill="black" stroke="none"/>
+    <!-- Eye highlights (small white dots) -->
+    <circle cx="-0.13" cy="0.0825" r="0.0075"
+            fill="white" stroke="none"/>
+    <circle cx="0.12" cy="0.0825" r="0.0075"
+            fill="white" stroke="none"/>
+
+    <!-- Infinity–symbol nose: two circles at (-0.2,-0.1) and (0.2,-0.1) scaled.
+         (Here “red!90” is approximated by #FF1919.) -->
+    <circle cx="-0.05" cy="-0.025" r="0.05"
+            fill="none" stroke="#FF1919" stroke-width="0.03"/>
+    <circle cx="0.05" cy="-0.025" r="0.05"
+            fill="none" stroke="#FF1919" stroke-width="0.03"/>
+
+    <!-- Whiskers (lines from near the nose to the face sides) -->
+    <line x1="-0.025" y1="-0.025" x2="-0.25" y2="-0.075"
+          stroke="black" stroke-width="0.02"/>
+    <line x1="-0.025" y1="-0.05" x2="-0.25" y2="-0.125"
+          stroke="black" stroke-width="0.02"/>
+    <line x1="0.025" y1="-0.025" x2="0.25" y2="-0.075"
+          stroke="black" stroke-width="0.02"/>
+    <line x1="0.025" y1="-0.05" x2="0.25" y2="-0.125"
+          stroke="black" stroke-width="0.02"/>
+
+    <!-- Pig Nose -->
+    <circle cx="0" cy="-0.05" r="0.08"
+            fill="pink" stroke="black" stroke-width="0.02"/>
+    <circle cx="-0.03" cy="-0.05" r="0.02"
+            fill="black" stroke="none"/>
+    <circle cx="0.03" cy="-0.05" r="0.02"
+            fill="black" stroke="none"/>
+
+    <!-- Upward–curving smile:
+         Originally drawn from (-0.6,-0.2) to (0.6,-0.2) with control points
+         (-0.2,-0.6) and (0.2,-0.6), now scaled to:
+         start: (-0.15,-0.05), control points: (-0.05,-0.15) and (0.05,-0.15),
+         end: (0.15,-0.05).
+         (Color “red!60” is approximated by #FF6666.) -->
+    <path d="M -0.15 -0.05 C -0.05 -0.15, 0.05 -0.15, 0.15 -0.05"
+          fill="none" stroke="#FF6666" stroke-width="0.03"/>
+
+    <!-- Tongue (an ellipse at (0,-0.4) scaled to (0,-0.1) with rx=0.05, ry=0.025)
+         Filled with “red!40” (here #FF9999) -->
+    <ellipse cx="0" cy="-0.1" rx="0.05" ry="0.025"
+             fill="#FF9999" stroke="none"/>
+
+  </g>
+</svg>

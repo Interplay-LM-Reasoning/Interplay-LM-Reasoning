@@ -1,0 +1,79 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug datagenerationworker - Basic",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/gsm-infinite/data/realistic/datagenerationworker.py",
+            "args": [
+                "--numprocs", "2",
+                "--opmax", "10",
+                "--total", "10",
+                "--mod", "-1",
+                "--number_range", "5",
+                "--target_length", "zero_context",
+                "--d", "2",
+                "--force",
+                "--listoperations", "4"
+            ],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/gsm-infinite/data/realistic",
+            "env": {},
+            "justMyCode": false,
+            "stopOnEntry": false
+        },
+        {
+            "name": "Debug datagenerationworker - From Script Example",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/gsm-infinite/data/realistic/datagenerationworker.py",
+            "args": [
+                "--numprocs", "1",
+                "--opmax", "30",
+                "--total", "10",
+                "--mod", "-1",
+                "--number_range", "5",
+                "--target_length", "zero_context",
+                "--d", "2",
+                "--force",
+                "--listoperations", "20", "19",
+                "--verbose"
+            ],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/gsm-infinite/data/realistic",
+            "env": {},
+            "justMyCode": false,
+            "stopOnEntry": false
+        },
+        {
+            "name": "Debug datagenerationworker - Custom Args",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/gsm-infinite/data/realistic/datagenerationworker.py",
+            "args": [
+                "--numprocs", "1",
+                "--opmax", "5",
+                "--total", "5",
+                "--mod", "-1",
+                "--number_range", "5",
+                "--target_length", "zero_context",
+                "--d", "2",
+                "--force",
+                "--listoperations", "3"
+            ],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/gsm-infinite/data/realistic",
+            "env": {},
+            "justMyCode": false,
+            "stopOnEntry": false
+        },
+        {
+            "name": "Debug datagenerationworker - Attach to Process",
+            "type": "debugpy",
+            "request": "attach",
+            "processId": "${command:pickProcess}",
+            "justMyCode": false
+        }
+    ]
+}

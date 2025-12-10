@@ -1,0 +1,51 @@
+### model
+model_name_or_path: configs/difficulty_qwen2
+trust_remote_code: true
+train_from_scratch: true
+flash_attn: fa2
+
+### method
+stage: pt
+do_train: true
+finetuning_type: full
+
+### dataset
+dataset: difficulty-5B          # use our converted train split, actually it is 5B
+cutoff_len: 2048
+overwrite_cache: true
+preprocessing_num_workers: 128
+val_size: 0.0001
+
+### output
+output_dir: saves/difficulty/diff2_14-tok5B-lr2e4-bs250k-schedcos-minlr3e-5-250910
+logging_steps: 1
+save_steps: 1000
+plot_loss: true
+overwrite_output_dir: true
+save_only_model: false
+report_to: wandb  # choices: [none, wandb, tensorboard, swanlab, mlflow]
+
+### train
+per_device_train_batch_size: 64
+gradient_accumulation_steps: 1 # token batch size = 64*1*2*2k=256k
+learning_rate: 2.0e-4
+weight_decay: 0.1
+num_train_epochs: 1.0
+lr_scheduler_type: cosine_with_min_lr
+lr_scheduler_kwargs: 
+  min_lr: 3e-5
+warmup_ratio: 0.05
+max_grad_norm: 1.0
+bf16: true
+gradient_checkpointing: true
+ddp_timeout: 180000000
+resume_from_checkpoint: null
+
+## eval
+# eval_dataset: difficulty-3B-val-id, difficulty-3B-val-ood # evaluate on our converted val split
+# per_device_eval_batch_size: 4
+eval_strategy: steps
+eval_steps: 1000
+
+
+

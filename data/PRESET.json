@@ -1,0 +1,374 @@
+{
+    "composition-10B": {
+        "op_level": { 
+            "id2-10_uniform": {
+                "id_op": [2,3,4,5,6,7,8,9,10],
+                "op_prob": [0.11, 0.11, 0.11, 0.11, 0.11, 0.11, 0.11, 0.11, 0.12]
+            },
+            "id2-10_0.2easy_0.3medium_0.5hard":{
+                "id_op":[2,3,4,5,6,7,8,9,10],
+                "op_prob":[0.06,0.86,0.08,0.1,0.1,0.1,0.16,0.16,0.18]
+            },
+            "id2-10_0.5easy_0.3medium_0.2hard":{
+                "id_op":[2,3,4,5,6,7,8,9,10],
+                "op_prob":[0.18,0.16,0.16,0.1,0.1,0.1,0.08,0.06,0.06]
+            },
+            "id2-10_0.4995easy_0.4995medium_0.001hard":{
+                "id_op":[2,3,4,5,6,7,8,9,10],
+                "op_prob":[0.1665,0.1665,0.1665,0.1665,0.1665,0.1665,0.003,0.003, 0.003]
+            },
+            "id2-10_0.495easy_0.495medium_0.01hard": {
+                "id_op": [2,3,4,5,6,7,8,9,10],
+                "op_prob": [0.1650,0.1650,0.1650, 0.1650,0.1650,0.1650, 0.0033,0.0033,0.0033]
+            },
+            "id2-10_0.475easy_0.475medium_0.05hard": {
+                "id_op": [2,3,4,5,6,7,8,9,10],
+                "op_prob": [0.1583,0.1583,0.1584, 0.1583,0.1583,0.1584, 0.0166,0.0166,0.0167]
+            },
+            "id2-10_0.4easy_0.4medium_0.2hard": {
+                "id_op": [2,3,4,5,6,7,8,9,10],
+                "op_prob": [0.1333,0.1333,0.1334, 0.1333,0.1333,0.1334, 0.0667,0.0667,0.0666]
+            },
+            "id2-10_0.25easy_0.25medium_0.5hard": {
+                "id_op": [2,3,4,5,6,7,8,9,10],
+                "op_prob": [0.0833,0.0833,0.0834, 0.0833,0.0833,0.0834, 0.1667,0.1667,0.1666]
+            }
+
+        },
+        "op_level_cpt": {
+            "cpt0.2-uniform_0.8-9-12": {
+                "id_op": [2,3,4,5,6,7,8,9,10,11,12],
+                "op_prob": [0.022222, 0.022222, 0.022222, 0.022222, 0.022222, 0.022222, 0.022222, 0.222222, 0.222222, 0.200000, 0.200000]
+
+            },
+            "cpt0.2-uniform_0.8-11-14": {
+                "id_op": [2,3,4,5,6,7,8,9,10,11,12,13,14],
+                "op_prob": [0.0221, 0.0221, 0.0221, 0.0221, 0.0221, 0.0221, 0.0221, 0.0221, 0.0223, 0.2, 0.2, 0.2, 0.2]
+            }
+        },
+        "op_level_rl": {
+            "op11-14_uniform": {
+                "id_op": [11,12,13,14],
+                "op_prob": [0.25,0.25,0.25,0.25]
+            },
+            "op7-10_uniform": {
+                "id_op": [7,8,9,10],
+                "op_prob": [0.25,0.25,0.25,0.25]
+            },
+            "op9-12_uniform": {
+                "id_op": [9,10,11,12],
+                "op_prob": [0.25,0.25,0.25,0.25]
+            },
+            "op17-20_uniform": {
+                "id_op": [17,18,19,20],
+                "op_prob": [0.25,0.25,0.25,0.25]
+            },
+            "op11-14_uniform_plus": {
+                "id_op": [2,3,4,5,6,7,8,9,10,11,12,13,14],
+                "op_prob": [0.0111, 0.0111, 0.0111, 0.0111, 0.0111, 0.0111, 0.0111, 0.0111, 0.0112, 0.225, 0.225, 0.225, 0.225]
+            }
+        }
+    },
+    "context-10B": {
+        "context_level": {
+            "idzoo_1.0zoo": {
+                "id_context": ["crazy_zootopia"],
+                "context_prob": [1.0]
+            },
+            "idzoo_0.999zoo_0.001teacher": {
+                "id_context": ["crazy_zootopia", "teachers_in_school"],
+                "context_prob": [0.999, 0.001]
+            },
+            "idzoo_0.99zoo_0.01teacher": {
+                "id_context": ["crazy_zootopia", "teachers_in_school"],
+                "context_prob": [0.99, 0.01]
+            },
+            "idzoo_0.95zoo_0.05teacher": {
+                "id_context": ["crazy_zootopia", "teachers_in_school"],
+                "context_prob": [0.95, 0.05]
+            },
+            "idzoo_0.9zoo_0.1teacher": {
+                "id_context": ["crazy_zootopia", "teachers_in_school"],
+                "context_prob": [0.9, 0.1]
+            },
+            "idzoo_0.8zoo_0.2teacher": {
+                "id_context": ["crazy_zootopia", "teachers_in_school"],
+                "context_prob": [0.8, 0.2]
+            },
+            "idzoo_0.5zoo_0.5teacher": {
+                "id_context": ["crazy_zootopia", "teachers_in_school"],
+                "context_prob": [0.5, 0.5]
+            }
+        },
+        "context_level_rl": {
+            "contextzoo_0.9zoo_0.1teacher": {
+                "id_context": ["crazy_zootopia", "teachers_in_school"],
+                "context_prob": [0.9, 0.1]
+            },
+            "contextzoo_0.8zoo_0.2teacher": {
+                "id_context": ["crazy_zootopia", "teachers_in_school"],
+                "context_prob": [0.8, 0.2]
+            },
+            "contextzoo_0.7zoo_0.3teacher": {
+                "id_context": ["crazy_zootopia", "teachers_in_school"],
+                "context_prob": [0.7, 0.3]
+            },
+            "contextzoo_0.95zoo_0.05teacher": {
+                "id_context": ["crazy_zootopia", "teachers_in_school"],
+                "context_prob": [0.95, 0.05]
+            },
+            "contextzoo_0.98zoo_0.02teacher": {
+                "id_context": ["crazy_zootopia", "teachers_in_school"],
+                "context_prob": [0.98, 0.02]
+            },
+            
+            "contextzoo_0.3zoo_0.7teacher": {
+                "id_context": ["crazy_zootopia", "teachers_in_school"],
+                "context_prob": [0.3, 0.7]
+            },
+            "contextzoo_0.99zoo_0.01teacher": {
+                "id_context": ["crazy_zootopia", "teachers_in_school"],
+                "context_prob": [0.99, 0.01]
+            },
+            "contextzoo_0.5zoo_0.5teacher": {
+                "id_context": ["crazy_zootopia", "teachers_in_school"],
+                "context_prob": [0.5, 0.5]
+            },
+            "contextzoo_0.1zoo_0.9teacher": {
+                "id_context": ["crazy_zootopia", "teachers_in_school"],
+                "context_prob": [0.2, 0.8]
+            },
+            "contextzoo_0.01zoo_0.99teacher": {
+                "id_context": ["crazy_zootopia", "teachers_in_school"],
+                "context_prob": [0.01, 0.99]
+            },
+            "contextzoo_1.0teacher": {
+                "id_context": ["teachers_in_school"],
+                "context_prob": [1.0]
+            },
+            "contextzoo_1.0zoo": {
+                "id_context": ["crazy_zootopia"],
+                "context_prob": [1.0]
+            }
+        }
+    },
+    "mixed-10B": {
+        "mixed_level": {
+            "0.7zoo_op2-20+0.3teacher_op2": [
+                {
+                    "id_context": "crazy_zootopia",
+                    "context_prob": 0.7,
+                    "id_op": [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20], 
+                    "op_prob": [0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316]
+                },
+                {
+                    "id_context": "teachers_in_school",
+                    "context_prob": 0.3,
+                    "id_op": [2],
+                    "op_prob": [1.0]
+                }
+            ],
+            "0.9zoo_op2-20+0.1teacher_op2": [
+                {
+                    "id_context": "crazy_zootopia",
+                    "context_prob": 0.9,
+                    "id_op": [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],
+                    "op_prob": [0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316]
+                },
+                {
+                    "id_context": "teachers_in_school",
+                    "context_prob": 0.1,
+                    "id_op": [2],
+                    "op_prob": [1.0]
+                }
+            ],
+            "0.999zoo_op2-20+0.001teacher_op2": [
+                {
+                    "id_context": "crazy_zootopia",
+                    "context_prob": 0.999,
+                    "id_op": [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20], 
+                    "op_prob": [0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316]
+                },
+                {
+                    "id_context": "teachers_in_school",
+                    "context_prob": 0.001,
+                    "id_op": [2],
+                    "op_prob": [1.0]
+                }
+            ],
+            "0.99zoo_op2-20+0.01teacher_op2": [
+                {
+                    "id_context": "crazy_zootopia",
+                    "context_prob": 0.99,
+                    "id_op": [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20], 
+                    "op_prob": [0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316, 0.0526316]
+                },
+                {
+                    "id_context": "teachers_in_school",
+                    "context_prob": 0.01,
+                    "id_op": [2],
+                    "op_prob": [1.0]
+                }
+            ],
+            "0.9zoo_uniform+0.1teacher_1.0easy": [
+                {
+                    "id_context": "crazy_zootopia",
+                    "context_prob": 0.9,
+                    "id_op": [2,3,4,5,6,7,8,9,10],
+                    "op_prob": [0.111111,0.111111,0.111111,0.111111,0.111111,0.111111,0.111111,0.111111,0.111112]
+                },
+                {
+                    "id_context": "teachers_in_school",
+                    "context_prob": 0.1,
+                    "id_op": [2,3,4,5,6,7,8,9,10],
+                    "op_prob": [0.333333,0.333333,0.333334,0.0,0.0,0.0,0.0,0.0,0.0]
+                }
+            ],
+            "0.9zoo_0.5hard+0.1teacher_1.0easy": [
+                {
+                    "id_context": "crazy_zootopia",
+                    "context_prob": 0.9,
+                    "id_op": [2,3,4,5,6,7,8,9,10],
+                    "op_prob": [0.066667,0.066667,0.066667,0.1,0.1,0.1,0.166667,0.166667,0.166665]
+                },
+                {
+                    "id_context": "teachers_in_school",
+                    "context_prob": 0.1,
+                    "id_op": [2,3,4,5,6,7,8,9,10],
+                    "op_prob": [0.333333,0.333333,0.333334,0.0,0.0,0.0,0.0,0.0,0.0]
+                }
+            ],
+            "0.9zoo_uniform+0.1teacher_0.9easy_0.1medium": [
+                {
+                    "id_context": "crazy_zootopia",
+                    "context_prob": 0.9,
+                    "id_op": [2,3,4,5,6,7,8,9,10],
+                    "op_prob": [0.111111,0.111111,0.111111,0.111111,0.111111,0.111111,0.111111,0.111111,0.111112]
+                },
+                {
+                    "id_context": "teachers_in_school",
+                    "context_prob": 0.1,
+                    "id_op": [2,3,4,5,6,7,8,9,10],
+                    "op_prob": [0.3,0.3,0.3,0.033333,0.033333,0.033334,0.0,0.0,0.0]
+                }
+            ],
+            "0.9zoo_0.5hard+0.1teacher_0.9easy_0.1medium": [
+                {
+                    "id_context": "crazy_zootopia",
+                    "context_prob": 0.9,
+                    "id_op": [2,3,4,5,6,7,8,9,10],
+                    "op_prob": [0.066667,0.066667,0.066667,0.1,0.1,0.1,0.166667,0.166667,0.166665]
+                },
+                {
+                    "id_context": "teachers_in_school",
+                    "context_prob": 0.1,
+                    "id_op": [2,3,4,5,6,7,8,9,10],
+                    "op_prob": [0.3,0.3,0.3,0.033333,0.033333,0.033334,0.0,0.0,0.0]
+                }
+            ],
+            "0.5zoo_uniform+0.5teacher_1.0easy": [
+                {
+                    "id_context": "crazy_zootopia",
+                    "context_prob": 0.5,
+                    "id_op": [2,3,4,5,6,7,8,9,10],
+                    "op_prob": [0.111111,0.111111,0.111111,0.111111,0.111111,0.111111,0.111111,0.111111,0.111112]
+                },
+                {
+                    "id_context": "teachers_in_school",
+                    "context_prob": 0.5,
+                    "id_op": [2,3,4,5,6,7,8,9,10],
+                    "op_prob": [0.333333,0.333333,0.333334,0.0,0.0,0.0,0.0,0.0,0.0]
+                }
+            ],
+            "0.5zoo_0.5hard+0.5teacher_1.0easy": [
+                {
+                    "id_context": "crazy_zootopia",
+                    "context_prob": 0.5,
+                    "id_op": [2,3,4,5,6,7,8,9,10],
+                    "op_prob": [0.066667,0.066667,0.066667,0.1,0.1,0.1,0.166667,0.166667,0.166665]
+                },
+                {
+                    "id_context": "teachers_in_school",
+                    "context_prob": 0.5,
+                    "id_op": [2,3,4,5,6,7,8,9,10],
+                    "op_prob": [0.333333,0.333333,0.333334,0.0,0.0,0.0,0.0,0.0,0.0]
+                }
+            ],
+            "0.5zoo_uniform+0.5teacher_0.9easy_0.1medium": [
+                {
+                    "id_context": "crazy_zootopia",
+                    "context_prob": 0.5,
+                    "id_op": [2,3,4,5,6,7,8,9,10],
+                    "op_prob": [0.111111,0.111111,0.111111,0.111111,0.111111,0.111111,0.111111,0.111111,0.111112]
+                },
+                {
+                    "id_context": "teachers_in_school",
+                    "context_prob": 0.5,
+                    "id_op": [2,3,4,5,6,7,8,9,10],
+                    "op_prob": [0.3,0.3,0.3,0.033333,0.033333,0.033334,0.0,0.0,0.0]
+                }
+            ],
+            "0.5zoo_0.5hard+0.5teacher_0.9easy_0.1medium": [
+                {
+                    "id_context": "crazy_zootopia",
+                    "context_prob": 0.5,
+                    "id_op": [2,3,4,5,6,7,8,9,10],
+                    "op_prob": [0.066667,0.066667,0.066667,0.1,0.1,0.1,0.166667,0.166667,0.166665]
+                },
+                {
+                    "id_context": "teachers_in_school",
+                    "context_prob": 0.5,
+                    "id_op": [2,3,4,5,6,7,8,9,10],
+                    "op_prob": [0.3,0.3,0.3,0.033333,0.033333,0.033334,0.0,0.0,0.0]
+                }
+            ]
+        },
+        "mixed_level_rl": {
+            "op11-14_uniform_full_zoo": [
+                {
+                    "id_context": "crazy_zootopia",
+                    "context_prob": 1.0,
+                    "id_op": [11,12,13,14],
+                    "op_prob": [0.25,0.25,0.25,0.25]
+                }
+            ],
+            "op11-14_uniform_full_teacher": [
+                {
+                    "id_context": "teachers_in_school",
+                    "context_prob": 1.0,
+                    "id_op": [11,12,13,14],
+                    "op_prob": [0.25,0.25,0.25,0.25]
+                }
+            ],
+            "op11-14_uniform_0.9zoo_0.1teacher": [
+                {
+                    "id_context": "crazy_zootopia",
+                    "context_prob": 0.9,
+                    "id_op": [11,12,13,14],
+                    "op_prob": [0.25,0.25,0.25,0.25]
+                },
+                {
+                    "id_context": "teachers_in_school",
+                    "context_prob": 0.1,
+                    "id_op": [11,12,13,14],
+                    "op_prob": [0.25,0.25,0.25,0.25]
+                }
+            ],
+            "op11-14_uniform_0.5zoo_0.5teacher": [
+                {
+                    "id_context": "crazy_zootopia",
+                    "context_prob": 0.5,
+                    "id_op": [11,12,13,14],
+                    "op_prob": [0.25,0.25,0.25,0.25]
+                },
+                {
+                    "id_context": "teachers_in_school",
+                    "context_prob": 0.5,
+                    "id_op": [11,12,13,14],
+                    "op_prob": [0.25,0.25,0.25,0.25]
+                }
+            ]
+        }
+        
+    }
+}
