@@ -1,0 +1,83 @@
+hydra:
+  searchpath:
+    - file://verl/trainer/config
+
+defaults:
+  - ppo_trainer
+  - _self_
+
+algorithm:
+  adv_estimator: grpo
+  use_kl_in_reward: false
+
+data:
+  train_files:
+    - data/context/heldout
+  val_files:
+    - data/context/val
+  tokenizer:
+  train_batch_size: 1024
+  max_prompt_length: 1024
+  max_response_length: 1024
+  filter_overlong_prompts: true
+  filter_overlong_prompts_workers: 32
+  truncation: error
+  preset_path: data/PRESET.json
+  task_name: context-10B/context_level_rl
+  task_setting: contextzoo_0.9zoo_0.1teacher
+  task_sample: 204800
+  preset_seed: 42
+  custom_cls:
+    path: verl/dataset_context.py
+    name: CustomRLHFDataset
+
+custom_reward_function:
+  path: verl/reward_fn.py
+  name: compute_score_with_step_process
+  reward_kwargs:
+    answer_weight: 0.2
+    step_weight: 0.8
+    value_tolerance: 1e-6
+
+actor_rollout_ref:
+  model:
+    # path: saves/context-10B/context_level/idzoo_0.99zoo_0.01teacher/pt
+    enable_gradient_checkpointing: true
+    use_remove_padding: true
+  actor:
+    optim:
+      lr: 1e-6
+    ppo_mini_batch_size: 256
+    ppo_micro_batch_size_per_gpu: 16
+    use_kl_loss: true
+    kl_loss_coef: 0.001
+    kl_loss_type: low_var_kl
+    entropy_coeff: 0.0
+    fsdp_config:
+      param_offload: false
+      optimizer_offload: false
+  rollout:
+    name: vllm
+    gpu_memory_utilization: 0.6
+    n: 6
+    tensor_model_parallel_size: 1
+    log_prob_micro_batch_size_per_gpu: 16
+  ref:
+    log_prob_micro_batch_size_per_gpu: 16
+    fsdp_config:
+      param_offload: true
+
+trainer:
+  critic_warmup: 0
+  logger:
+    - console
+    - wandb
+  project_name: context-10B-rl-process
+  experiment_name: rl-contextzoo_0.9zoo_0.1teacher-process-200steps
+  default_local_dir: saves/context-10B/context_level_rl/contextzoo_0.9zoo_0.1teacher/rl_process/${trainer.experiment_name}
+  n_gpus_per_node: 6
+  nnodes: 1
+  save_freq: 20
+  test_freq: 20
+  log_val_generations: 100
+  total_epochs: 1

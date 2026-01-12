@@ -1,0 +1,98 @@
+hydra:
+  searchpath:
+    - file://verl/trainer/config
+
+defaults:
+  - ppo_trainer
+  - _self_
+
+algorithm:
+  adv_estimator: grpo
+  use_kl_in_reward: false
+
+data:
+  train_files:
+    - data/composition/heldout/op11-50k.jsonl
+    - data/composition/heldout/op12-50k.jsonl
+    - data/composition/heldout/op13-50k.jsonl
+    - data/composition/heldout/op14-50k.jsonl
+  val_files:
+    - data/composition/val/op2-200.jsonl
+    - data/composition/val/op3-200.jsonl
+    - data/composition/val/op4-200.jsonl
+    - data/composition/val/op5-200.jsonl
+    - data/composition/val/op6-200.jsonl
+    - data/composition/val/op7-200.jsonl
+    - data/composition/val/op8-200.jsonl
+    - data/composition/val/op9-200.jsonl
+    - data/composition/val/op10-200.jsonl
+    - data/composition/val/op11-200.jsonl
+    - data/composition/val/op12-200.jsonl
+    - data/composition/val/op13-200.jsonl
+    - data/composition/val/op14-200.jsonl
+    - data/composition/val/op15-200.jsonl
+    - data/composition/val/op16-200.jsonl
+    - data/composition/val/op17-200.jsonl
+    - data/composition/val/op18-200.jsonl
+    - data/composition/val/op19-200.jsonl
+    - data/composition/val/op20-200.jsonl
+  tokenizer:
+  train_batch_size: 1024
+  max_prompt_length: 1024
+  max_response_length: 1024
+  id_max_op: 10
+  filter_overlong_prompts: true
+  truncation: error
+  custom_cls:
+    path: verl/dataset.py
+    name: CustomRLHFDataset
+
+custom_reward_function:
+  path: verl/reward_fn.py
+  name: compute_score_with_step_process
+  reward_kwargs:
+    answer_weight: 0.5
+    step_weight: 0.5
+    value_tolerance: 1e-6
+
+actor_rollout_ref:
+  model:
+    enable_gradient_checkpointing: true
+    use_remove_padding: true
+  actor:
+    optim:
+      lr: 1e-6
+    ppo_mini_batch_size: 256
+    ppo_micro_batch_size_per_gpu: 16
+    use_kl_loss: true
+    kl_loss_coef: 0.001
+    kl_loss_type: low_var_kl
+    entropy_coeff: 0.0
+    fsdp_config:
+      param_offload: false
+      optimizer_offload: false
+  rollout:
+    name: vllm
+    gpu_memory_utilization: 0.6
+    n: 6
+    tensor_model_parallel_size: 1
+    log_prob_micro_batch_size_per_gpu: 16
+  ref:
+    log_prob_micro_batch_size_per_gpu: 16
+    fsdp_config:
+      param_offload: true
+
+trainer:
+  critic_warmup: 0
+  logger:
+    - console
+    - wandb
+  project_name: composition-10B-op-RL-process
+  experiment_name: rl-op11-14_uniform-process0.5-200steps
+  default_local_dir: saves/composition-10B/op_level/id2-10_0.4995easy_0.4995medium_0.001hard/rl_process/${trainer.experiment_name}
+  n_gpus_per_node: 6
+  nnodes: 1
+  save_freq: 20
+  test_freq: 20
+  log_val_generations: 100
+  total_epochs: 1

@@ -1,0 +1,56 @@
+### model
+model_name_or_path: model_configs/qwen2_100M
+trust_remote_code: true
+train_from_scratch: true
+flash_attn: fa2
+
+### method
+stage: pt
+do_train: true
+finetuning_type: full
+
+### dataset
+dataset: composition         # use our converted train split, actually it is 30B
+cutoff_len: 2048
+preprocessing_num_workers: 56
+dataloader_num_workers: 56
+val_size: 0.0001
+dataset_dir: data
+
+
+### output
+output_dir: saves/composition-10B/op_level/id2-10_0.4995easy_0.4995medium_0.001hard/pt
+logging_steps: 10
+save_steps: 0.2
+plot_loss: true
+overwrite_output_dir: true
+save_only_model: false
+report_to: wandb  # choices: [none, wandb, tensorboard, swanlab, mlflow]
+
+### train
+per_device_train_batch_size: 64
+gradient_accumulation_steps: 1 # token batch size = 64*1*4*2k = 512k
+learning_rate: 1.0e-4
+weight_decay: 0.1
+num_train_epochs: 1.0
+lr_scheduler_type: cosine_with_min_lr
+lr_scheduler_kwargs: 
+  min_lr: 3e-5
+warmup_ratio: 0.05
+max_grad_norm: 1.0
+bf16: true
+gradient_checkpointing: true
+ddp_timeout: 180000000
+resume_from_checkpoint: null
+
+## eval
+# eval_dataset: difficulty-3B-val-id, difficulty-3B-val-ood # evaluate on our converted val split
+# per_device_eval_batch_size: 4
+eval_strategy: "no"
+
+## op-level configs, not wandb settings
+id_max_op: 10
+task_name: composition-10B/op_level
+task_setting: id2-10_0.4995easy_0.4995medium_0.001hard
+task_token_count: 10B 
+
