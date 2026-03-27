@@ -1,4 +1,6 @@
 #!/bin/bash
+set -euo pipefail
+
 
 if [[ -z "${CUDA_VISIBLE_DEVICES:-}" ]]; then
     echo "CUDA_VISIBLE_DEVICES must be set before running this script" >&2
@@ -10,27 +12,39 @@ BASE_MODEL=id2-10_0.5easy_0.3medium_0.2hard
 
 DRY_RUN=${DRY_RUN:-0}
 
-LLAMA_CONFIG=scripts/composition/op-difficulty-10B/pt-diff2_10-tok10B-lr1e-4-bs512k-schedcos-minlr3e-5/${BASE_MODEL}.yaml \
-VERL_CONFIG=scripts/composition/op-difficulty-10B/rl-200steps/op7-10_uniform.yaml \
-DRY_RUN=${DRY_RUN} \
+LLAMA_CONFIG=scripts/composition/op-difficulty-10B/pt-diff2_10-tok10B-lr1e-4-bs512k-schedcos-minlr3e-5/${BASE_MODEL}.yaml
+VERL_CONFIG=scripts/composition/op-difficulty-10B/rl-200steps/op7-10_uniform.yaml
+DRY_RUN=${DRY_RUN}
+LLAMA_CONFIG="${LLAMA_CONFIG}" \
+VERL_CONFIG="${VERL_CONFIG}" \
+DRY_RUN="${DRY_RUN}" \
 ./scripts/meta_run.sh \
  --skip-pretrain
 
 
-LLAMA_CONFIG=scripts/composition/op-difficulty-10B/pt-diff2_10-tok10B-lr1e-4-bs512k-schedcos-minlr3e-5/${BASE_MODEL}.yaml \
-VERL_CONFIG=scripts/composition/op-difficulty-10B/rl-200steps/op9-12_uniform.yaml \
-DRY_RUN=${DRY_RUN} \
+LLAMA_CONFIG=scripts/composition/op-difficulty-10B/pt-diff2_10-tok10B-lr1e-4-bs512k-schedcos-minlr3e-5/${BASE_MODEL}.yaml
+VERL_CONFIG=scripts/composition/op-difficulty-10B/rl-200steps/op9-12_uniform.yaml
+DRY_RUN=${DRY_RUN}
+LLAMA_CONFIG="${LLAMA_CONFIG}" \
+VERL_CONFIG="${VERL_CONFIG}" \
+DRY_RUN="${DRY_RUN}" \
 ./scripts/meta_run.sh \
  --skip-pretrain
  
-LLAMA_CONFIG=scripts/composition/op-difficulty-10B/pt-diff2_10-tok10B-lr1e-4-bs512k-schedcos-minlr3e-5/${BASE_MODEL}.yaml \
-VERL_CONFIG=scripts/composition/op-difficulty-10B/rl-200steps/op11-14_uniform.yaml \
-DRY_RUN=${DRY_RUN} \
+LLAMA_CONFIG=scripts/composition/op-difficulty-10B/pt-diff2_10-tok10B-lr1e-4-bs512k-schedcos-minlr3e-5/${BASE_MODEL}.yaml
+VERL_CONFIG=scripts/composition/op-difficulty-10B/rl-200steps/op11-14_uniform.yaml
+DRY_RUN=${DRY_RUN}
+LLAMA_CONFIG="${LLAMA_CONFIG}" \
+VERL_CONFIG="${VERL_CONFIG}" \
+DRY_RUN="${DRY_RUN}" \
 ./scripts/meta_run.sh \
  --skip-pretrain
 
-LLAMA_CONFIG=scripts/composition/op-difficulty-10B/pt-diff2_10-tok10B-lr1e-4-bs512k-schedcos-minlr3e-5/${BASE_MODEL}.yaml \
-VERL_CONFIG=scripts/composition/op-difficulty-10B/rl-200steps/op17-20_uniform.yaml \
-DRY_RUN=${DRY_RUN} \
+LLAMA_CONFIG=scripts/composition/op-difficulty-10B/pt-diff2_10-tok10B-lr1e-4-bs512k-schedcos-minlr3e-5/${BASE_MODEL}.yaml
+VERL_CONFIG=scripts/composition/op-difficulty-10B/rl-200steps/op17-20_uniform.yaml
+DRY_RUN=${DRY_RUN}
+LLAMA_CONFIG="${LLAMA_CONFIG}" \
+VERL_CONFIG="${VERL_CONFIG}" \
+DRY_RUN="${DRY_RUN}" \
 ./scripts/meta_run.sh \
  --skip-pretrain --do-eval

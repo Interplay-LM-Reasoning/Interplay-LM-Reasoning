@@ -103,7 +103,7 @@ trainer:
     - console
     - wandb
   project_name: composition-10B-op-cpt-RL_fixed
-  experiment_name: cpt0.8-rl-op11-14_uniform-100step-0.8RL
+  experiment_name: cpt0.8-rl-op11-14_uniform-50step-0.8RL
   default_local_dir: saves/composition-10B/op_level/id2-10_0.4995easy_0.4995medium_0.001hard/rl/${trainer.experiment_name}
   n_gpus_per_node: 6
   nnodes: 1

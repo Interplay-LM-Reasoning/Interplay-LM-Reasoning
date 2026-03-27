@@ -1,3 +1,11 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+if [[ -z "${CUDA_VISIBLE_DEVICES:-}" ]]; then
+    echo "CUDA_VISIBLE_DEVICES must be set before running this script" >&2
+    exit 1
+fi
+
 # This scripts corresponds to the mid / post-training data mixing ratio mentioned in Section 5.
 # We explore on the extrapolation setting:
 # For pre-training: (the same as Section 3) we use the data mixture of 20% easy, 30% medium, and 50% hard tasks.

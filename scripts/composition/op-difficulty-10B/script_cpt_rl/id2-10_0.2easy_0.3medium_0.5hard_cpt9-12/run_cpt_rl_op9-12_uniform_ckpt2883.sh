@@ -17,10 +17,15 @@ CONFIG_NAME="cpt-rl-op9-12_uniform-ckpt2883.yaml"
 CPT_CHECKPOINT_ROOT="saves/composition-10B/op_level/${BASE_MODEL}/cpt0.2-uniform_0.8-9-12"
 CPT_CHECKPOINT_PATH="${CPT_CHECKPOINT_ROOT}/checkpoint-2883"
 
-EVAL_DATA_ROOT="data/composition/test" \
-EVAL_DATA_DIR="${EVAL_DATA_ROOT}" \
-VERL_EXTRA_ARGS="actor_rollout_ref.model.path=${CPT_CHECKPOINT_PATH} data.preset_path=data/PRESET.json" \
-LLAMA_CONFIG="${PT_CONFIG}" \
-VERL_CONFIG="${CPT_CONFIG_ROOT}/${CONFIG_NAME}" \
+EVAL_DATA_ROOT="data/composition/test"
+EVAL_DATA_DIR="${EVAL_DATA_ROOT}"
+VERL_EXTRA_ARGS="actor_rollout_ref.model.path=${CPT_CHECKPOINT_PATH} data.preset_path=data/PRESET.json"
+LLAMA_CONFIG="${PT_CONFIG}"
+VERL_CONFIG="${CPT_CONFIG_ROOT}/${CONFIG_NAME}"
+EVAL_DATA_ROOT="${EVAL_DATA_ROOT}" \
+EVAL_DATA_DIR="${EVAL_DATA_DIR}" \
+VERL_EXTRA_ARGS="${VERL_EXTRA_ARGS}" \
+LLAMA_CONFIG="${LLAMA_CONFIG}" \
+VERL_CONFIG="${VERL_CONFIG}" \
 ./scripts/meta_run.sh \
   --skip-pretrain

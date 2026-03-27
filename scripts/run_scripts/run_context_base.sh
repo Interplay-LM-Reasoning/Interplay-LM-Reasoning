@@ -1,3 +1,11 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+if [[ -z "${CUDA_VISIBLE_DEVICES:-}" ]]; then
+    echo "CUDA_VISIBLE_DEVICES must be set before running this script" >&2
+    exit 1
+fi
+
 # This scripts corresponds to the contextual pre-training in Section 4.
 # We run pre-training for contextual tasks with different contextual templates and fix the post-train RL data distribution.
 # The pre-training consists of zoo with op=2-20 tasks and teacher with op=2 tasks 

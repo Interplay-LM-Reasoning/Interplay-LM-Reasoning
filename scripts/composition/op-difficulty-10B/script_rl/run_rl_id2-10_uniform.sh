@@ -1,4 +1,6 @@
 #!/bin/bash
+set -euo pipefail
+
 
 if [[ -z "${CUDA_VISIBLE_DEVICES:-}" ]]; then
     echo "CUDA_VISIBLE_DEVICES must be set before running this script" >&2
@@ -7,8 +9,10 @@ fi
 
 
 
-LLAMA_CONFIG=scripts/composition/op-difficulty-10B/pt-diff2_10-tok10B-lr1e-4-bs512k-schedcos-minlr3e-5/id2-10_uniform.yaml \
-VERL_CONFIG=scripts/composition/op-difficulty-10B/rl-200steps/op7-10_uniform.yaml \
+LLAMA_CONFIG=scripts/composition/op-difficulty-10B/pt-diff2_10-tok10B-lr1e-4-bs512k-schedcos-minlr3e-5/id2-10_uniform.yaml
+VERL_CONFIG=scripts/composition/op-difficulty-10B/rl-200steps/op7-10_uniform.yaml
+LLAMA_CONFIG="${LLAMA_CONFIG}" \
+VERL_CONFIG="${VERL_CONFIG}" \
 ./scripts/meta_run.sh \
  --skip-pretrain
 
@@ -23,6 +27,7 @@ VERL_CONFIG=scripts/composition/op-difficulty-10B/rl-200steps/op7-10_uniform.yam
 #  --skip-pretrain
 
  LLAMA_CONFIG=scripts/composition/op-difficulty-10B/pt-diff2_10-tok10B-lr1e-4-bs512k-schedcos-minlr3e-5/id2-10_uniform.yaml \
-VERL_CONFIG=scripts/composition/op-difficulty-10B/rl-200steps/op17-20_uniform.yaml \
+VERL_CONFIG=scripts/composition/op-difficulty-10B/rl-200steps/op17-20_uniform.yaml
+VERL_CONFIG="${VERL_CONFIG}" \
 ./scripts/meta_run.sh \
  --skip-pretrain
