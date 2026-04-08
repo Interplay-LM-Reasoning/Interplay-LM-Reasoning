@@ -58,23 +58,14 @@ conda activate interplay-lm
 python -m pip install --upgrade pip
 ```
 
-Install the LLaMA-Factory pre-training stack:
+Install the LLaMA-Factory pre-training stack and the local verl RL stack:
 
 ```bash
-python -m pip install -e LLaMA-Factory
+pip install -e ./LLaMA-Factory
+pip install -e ./verl[vllm]
 ```
 
-Install the local verl RL stack. For the training and evaluation scripts in this repository, we typically use the vLLM and math extras:
-
-```bash
-python -m pip install -e "verl[vllm,math]"
-```
-
-If your cluster requires custom CUDA / PyTorch / FlashAttention builds, install those first according to the cluster environment, then install the editable packages above. For GPU kernels used by verl, you can also install the optional GPU extra when compatible with your CUDA environment:
-
-```bash
-python -m pip install -e "verl[gpu]"
-```
+Make sure your PyTorch version matches the CUDA version available on your machine or cluster.
 
 Finally, run commands from the repository root so local modules such as `utils` and `verl` resolve correctly:
 
