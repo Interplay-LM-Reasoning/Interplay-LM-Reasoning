@@ -1,5 +1,5 @@
 <h1 align="center">
-On the Interplay of Pre-Training, Mid-Training, and RL on Reasoning Language Models
+[🌟ICML 2026 Spotlight] On the Interplay of Pre-Training, Mid-Training, and RL on Reasoning Language Models
 </h1>
 
 <div align="center">
