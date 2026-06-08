@@ -19,6 +19,10 @@ Carnegie Mellon University, Language Technologies Institute
 
 </div>
 
+## 🎉 Update
+
+This work has been accepted as a **Spotlight paper at ICML 2026**. We thank the reviewers and area chairs for their insightful feedback. See you in Seoul!
+
 ## Does Reinforcement Learning Truly Extend Reasoning?
 - **The "Capability Refiner" View**: Some work characterizes RL as a refiner of existing skills, amplifying abilities already learned during pre-training. RL shows limited ability to improve pass@k compared with base model.
 
