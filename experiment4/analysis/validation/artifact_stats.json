@@ -1,0 +1,74 @@
+{
+ "zoo/base": {
+  "n": 150,
+  "with_missing": 8,
+  "missing_but_mentioned": 0,
+  "cats": {
+   "dep": 127,
+   "depval": 14,
+   "depvalmiss": 5,
+   "depmiss": 3,
+   "val": 1
+  }
+ },
+ "zoo/outcome": {
+  "n": 150,
+  "with_missing": 5,
+  "missing_but_mentioned": 0,
+  "cats": {
+   "dep": 130,
+   "depval": 13,
+   "depmiss": 4,
+   "val": 2,
+   "depvalmiss": 1
+  }
+ },
+ "zoo/strict": {
+  "n": 150,
+  "with_missing": 8,
+  "missing_but_mentioned": 0,
+  "cats": {
+   "dep": 137,
+   "depmiss": 6,
+   "depval": 5,
+   "depvalmiss": 2
+  }
+ },
+ "teachers/base": {
+  "n": 150,
+  "with_missing": 46,
+  "missing_but_mentioned": 0,
+  "cats": {
+   "dep": 69,
+   "depval": 34,
+   "depvalmiss": 29,
+   "depmiss": 17,
+   "val": 1
+  }
+ },
+ "teachers/outcome": {
+  "n": 150,
+  "with_missing": 51,
+  "missing_but_mentioned": 0,
+  "cats": {
+   "dep": 80,
+   "depmiss": 28,
+   "depval": 18,
+   "depvalmiss": 18,
+   "miss": 5,
+   "val": 1
+  }
+ },
+ "teachers/strict": {
+  "n": 150,
+  "with_missing": 36,
+  "missing_but_mentioned": 0,
+  "cats": {
+   "dep": 95,
+   "depvalmiss": 21,
+   "depval": 15,
+   "depmiss": 15,
+   "val": 4
+  }
+ }
+}

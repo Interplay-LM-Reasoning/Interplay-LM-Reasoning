@@ -1,0 +1,151 @@
+{
+  "runs": {
+    "zoo/base": {
+      "n_prompts": 1000,
+      "n_samples": 64000,
+      "n_samples_per_prompt": 64,
+      "avg_resp_tokens": 358.422171875
+    },
+    "zoo/outcome": {
+      "n_prompts": 1000,
+      "n_samples": 64000,
+      "n_samples_per_prompt": 64,
+      "avg_resp_tokens": 356.858328125
+    },
+    "zoo/mix_0.5_0.5": {
+      "n_prompts": 1000,
+      "n_samples": 64000,
+      "n_samples_per_prompt": 64,
+      "avg_resp_tokens": 355.060125
+    },
+    "zoo/mix_0.2_0.8": {
+      "n_prompts": 1000,
+      "n_samples": 64000,
+      "n_samples_per_prompt": 64,
+      "avg_resp_tokens": 354.46434375
+    },
+    "zoo/strict": {
+      "n_prompts": 1000,
+      "n_samples": 64000,
+      "n_samples_per_prompt": 64,
+      "avg_resp_tokens": 355.1975625
+    },
+    "teachers/base": {
+      "n_prompts": 1000,
+      "n_samples": 64000,
+      "n_samples_per_prompt": 64,
+      "avg_resp_tokens": 373.966484375
+    },
+    "teachers/outcome": {
+      "n_prompts": 1000,
+      "n_samples": 64000,
+      "n_samples_per_prompt": 64,
+      "avg_resp_tokens": 372.2449375
+    },
+    "teachers/mix_0.5_0.5": {
+      "n_prompts": 1000,
+      "n_samples": 64000,
+      "n_samples_per_prompt": 64,
+      "avg_resp_tokens": 369.98403125
+    },
+    "teachers/mix_0.2_0.8": {
+      "n_prompts": 1000,
+      "n_samples": 64000,
+      "n_samples_per_prompt": 64,
+      "avg_resp_tokens": 365.18696875
+    },
+    "teachers/strict": {
+      "n_prompts": 1000,
+      "n_samples": 64000,
+      "n_samples_per_prompt": 64,
+      "avg_resp_tokens": 360.889015625
+    }
+  },
+  "headline": {
+    "zoo/base": {
+      "display": "Base (no RL)",
+      "kmax": 64,
+      "strict_pass@1_overall": 0.603,
+      "strict_pass@kmax_overall": 0.87,
+      "strict_pass@1_hard": 0.5466666666666666,
+      "hacking_rate_overall": 0.33644647720131277
+    },
+    "zoo/outcome": {
+      "display": "1.0 Outcome",
+      "kmax": 64,
+      "strict_pass@1_overall": 0.643,
+      "strict_pass@kmax_overall": 0.851,
+      "strict_pass@1_hard": 0.5983333333333334,
+      "hacking_rate_overall": 0.32614328498839046
+    },
+    "zoo/mix_0.5_0.5": {
+      "display": "0.5 Outcome + 0.5 Process",
+      "kmax": 64,
+      "strict_pass@1_overall": 0.623,
+      "strict_pass@kmax_overall": 0.864,
+      "strict_pass@1_hard": 0.5866666666666667,
+      "hacking_rate_overall": 0.32340776111372654
+    },
+    "zoo/mix_0.2_0.8": {
+      "display": "0.2 Outcome + 0.8 Process",
+      "kmax": 64,
+      "strict_pass@1_overall": 0.626,
+      "strict_pass@kmax_overall": 0.862,
+      "strict_pass@1_hard": 0.5883333333333334,
+      "hacking_rate_overall": 0.3221748185971513
+    },
+    "zoo/strict": {
+      "display": "1.0 Outcome if Process Correct",
+      "kmax": 64,
+      "strict_pass@1_overall": 0.63,
+      "strict_pass@kmax_overall": 0.856,
+      "strict_pass@1_hard": 0.585,
+      "hacking_rate_overall": 0.31998850846655624
+    },
+    "teachers/base": {
+      "display": "Base (no RL)",
+      "kmax": 64,
+      "strict_pass@1_overall": 0.203,
+      "strict_pass@kmax_overall": 0.627,
+      "strict_pass@1_hard": 0.115,
+      "hacking_rate_overall": 0.5231580127845687
+    },
+    "teachers/outcome": {
+      "display": "1.0 Outcome",
+      "kmax": 64,
+      "strict_pass@1_overall": 0.361,
+      "strict_pass@kmax_overall": 0.688,
+      "strict_pass@1_hard": 0.30333333333333334,
+      "hacking_rate_overall": 0.4580661768147143
+    },
+    "teachers/mix_0.5_0.5": {
+      "display": "0.5 Outcome + 0.5 Process",
+      "kmax": 64,
+      "strict_pass@1_overall": 0.4,
+      "strict_pass@kmax_overall": 0.703,
+      "strict_pass@1_hard": 0.325,
+      "hacking_rate_overall": 0.42331387433950945
+    },
+    "teachers/mix_0.2_0.8": {
+      "display": "0.2 Outcome + 0.8 Process",
+      "kmax": 64,
+      "strict_pass@1_overall": 0.392,
+      "strict_pass@kmax_overall": 0.68,
+      "strict_pass@1_hard": 0.335,
+      "hacking_rate_overall": 0.4221979147272389
+    },
+    "teachers/strict": {
+      "display": "1.0 Outcome if Process Correct",
+      "kmax": 64,
+      "strict_pass@1_overall": 0.387,
+      "strict_pass@kmax_overall": 0.688,
+      "strict_pass@1_hard": 0.325,
+      "hacking_rate_overall": 0.40494541564346326
+    }
+  },
+  "paper_predictions": [
+    "Any process signal raises strict pass@1 by ~4-5 points over outcome-only on the hardest problems.",
+    "0.2/0.8 and strict are best; strict has the lowest hacking rate.",
+    "Process rewards shift errors away from wrong dependencies and missing steps."
+  ]
+}
