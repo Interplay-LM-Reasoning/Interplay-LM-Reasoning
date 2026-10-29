@@ -1,0 +1,181 @@
+ctx,label,band,category,count,share,n_samples
+zoo,base,edge (op 12-14),correct,17118,0.668671875,25600
+zoo,base,edge (op 12-14),dependency_mismatch,8116,0.31703125,25600
+zoo,base,edge (op 12-14),missing_nodes,617,0.0241015625,25600
+zoo,base,edge (op 12-14),value_mismatch,2512,0.098125,25600
+zoo,base,edge (op 12-14),answer_mismatch,1735,0.0677734375,25600
+zoo,base,edge (op 12-14),unparseable,0,0.0,25600
+zoo,base,hard (op 16-20),correct,20893,0.5440885416666666,38400
+zoo,base,hard (op 16-20),dependency_mismatch,17155,0.44674479166666664,38400
+zoo,base,hard (op 16-20),missing_nodes,2800,0.07291666666666667,38400
+zoo,base,hard (op 16-20),value_mismatch,6318,0.16453125,38400
+zoo,base,hard (op 16-20),answer_mismatch,4981,0.12971354166666665,38400
+zoo,base,hard (op 16-20),unparseable,0,0.0,38400
+zoo,base,overall,correct,38011,0.593921875,64000
+zoo,base,overall,dependency_mismatch,25271,0.394859375,64000
+zoo,base,overall,missing_nodes,3417,0.053390625,64000
+zoo,base,overall,value_mismatch,8830,0.13796875,64000
+zoo,base,overall,answer_mismatch,6716,0.1049375,64000
+zoo,base,overall,unparseable,0,0.0,64000
+zoo,outcome,edge (op 12-14),correct,17424,0.680625,25600
+zoo,outcome,edge (op 12-14),dependency_mismatch,7760,0.303125,25600
+zoo,outcome,edge (op 12-14),missing_nodes,440,0.0171875,25600
+zoo,outcome,edge (op 12-14),value_mismatch,2257,0.0881640625,25600
+zoo,outcome,edge (op 12-14),answer_mismatch,1416,0.0553125,25600
+zoo,outcome,edge (op 12-14),unparseable,0,0.0,25600
+zoo,outcome,hard (op 16-20),correct,22626,0.58921875,38400
+zoo,outcome,hard (op 16-20),dependency_mismatch,15304,0.3985416666666667,38400
+zoo,outcome,hard (op 16-20),missing_nodes,1853,0.048255208333333334,38400
+zoo,outcome,hard (op 16-20),value_mismatch,4171,0.10861979166666667,38400
+zoo,outcome,hard (op 16-20),answer_mismatch,3150,0.08203125,38400
+zoo,outcome,hard (op 16-20),unparseable,0,0.0,38400
+zoo,outcome,overall,correct,40050,0.62578125,64000
+zoo,outcome,overall,dependency_mismatch,23064,0.360375,64000
+zoo,outcome,overall,missing_nodes,2293,0.035828125,64000
+zoo,outcome,overall,value_mismatch,6428,0.1004375,64000
+zoo,outcome,overall,answer_mismatch,4566,0.07134375,64000
+zoo,outcome,overall,unparseable,0,0.0,64000
+zoo,mix_0.5_0.5,edge (op 12-14),correct,17521,0.6844140625,25600
+zoo,mix_0.5_0.5,edge (op 12-14),dependency_mismatch,7675,0.2998046875,25600
+zoo,mix_0.5_0.5,edge (op 12-14),missing_nodes,493,0.0192578125,25600
+zoo,mix_0.5_0.5,edge (op 12-14),value_mismatch,2226,0.086953125,25600
+zoo,mix_0.5_0.5,edge (op 12-14),answer_mismatch,1371,0.0535546875,25600
+zoo,mix_0.5_0.5,edge (op 12-14),unparseable,0,0.0,25600
+zoo,mix_0.5_0.5,hard (op 16-20),correct,22720,0.5916666666666667,38400
+zoo,mix_0.5_0.5,hard (op 16-20),dependency_mismatch,15236,0.39677083333333335,38400
+zoo,mix_0.5_0.5,hard (op 16-20),missing_nodes,2116,0.05510416666666667,38400
+zoo,mix_0.5_0.5,hard (op 16-20),value_mismatch,4151,0.10809895833333333,38400
+zoo,mix_0.5_0.5,hard (op 16-20),answer_mismatch,3153,0.082109375,38400
+zoo,mix_0.5_0.5,hard (op 16-20),unparseable,0,0.0,38400
+zoo,mix_0.5_0.5,overall,correct,40241,0.628765625,64000
+zoo,mix_0.5_0.5,overall,dependency_mismatch,22911,0.357984375,64000
+zoo,mix_0.5_0.5,overall,missing_nodes,2609,0.040765625,64000
+zoo,mix_0.5_0.5,overall,value_mismatch,6377,0.099640625,64000
+zoo,mix_0.5_0.5,overall,answer_mismatch,4524,0.0706875,64000
+zoo,mix_0.5_0.5,overall,unparseable,0,0.0,64000
+zoo,mix_0.2_0.8,edge (op 12-14),correct,17590,0.687109375,25600
+zoo,mix_0.2_0.8,edge (op 12-14),dependency_mismatch,7610,0.297265625,25600
+zoo,mix_0.2_0.8,edge (op 12-14),missing_nodes,437,0.0170703125,25600
+zoo,mix_0.2_0.8,edge (op 12-14),value_mismatch,2112,0.0825,25600
+zoo,mix_0.2_0.8,edge (op 12-14),answer_mismatch,1252,0.04890625,25600
+zoo,mix_0.2_0.8,edge (op 12-14),unparseable,0,0.0,25600
+zoo,mix_0.2_0.8,hard (op 16-20),correct,22765,0.5928385416666667,38400
+zoo,mix_0.2_0.8,hard (op 16-20),dependency_mismatch,15202,0.39588541666666666,38400
+zoo,mix_0.2_0.8,hard (op 16-20),missing_nodes,2309,0.06013020833333333,38400
+zoo,mix_0.2_0.8,hard (op 16-20),value_mismatch,4209,0.109609375,38400
+zoo,mix_0.2_0.8,hard (op 16-20),answer_mismatch,3212,0.08364583333333334,38400
+zoo,mix_0.2_0.8,hard (op 16-20),unparseable,0,0.0,38400
+zoo,mix_0.2_0.8,overall,correct,40355,0.630546875,64000
+zoo,mix_0.2_0.8,overall,dependency_mismatch,22812,0.3564375,64000
+zoo,mix_0.2_0.8,overall,missing_nodes,2746,0.04290625,64000
+zoo,mix_0.2_0.8,overall,value_mismatch,6321,0.098765625,64000
+zoo,mix_0.2_0.8,overall,answer_mismatch,4464,0.06975,64000
+zoo,mix_0.2_0.8,overall,unparseable,0,0.0,64000
+zoo,strict,edge (op 12-14),correct,17541,0.6851953125,25600
+zoo,strict,edge (op 12-14),dependency_mismatch,7721,0.3016015625,25600
+zoo,strict,edge (op 12-14),missing_nodes,512,0.02,25600
+zoo,strict,edge (op 12-14),value_mismatch,2143,0.0837109375,25600
+zoo,strict,edge (op 12-14),answer_mismatch,1385,0.0541015625,25600
+zoo,strict,edge (op 12-14),unparseable,0,0.0,25600
+zoo,strict,hard (op 16-20),correct,22698,0.59109375,38400
+zoo,strict,hard (op 16-20),dependency_mismatch,15245,0.39700520833333336,38400
+zoo,strict,hard (op 16-20),missing_nodes,2465,0.06419270833333333,38400
+zoo,strict,hard (op 16-20),value_mismatch,4331,0.11278645833333334,38400
+zoo,strict,hard (op 16-20),answer_mismatch,3441,0.089609375,38400
+zoo,strict,hard (op 16-20),unparseable,0,0.0,38400
+zoo,strict,overall,correct,40239,0.628734375,64000
+zoo,strict,overall,dependency_mismatch,22966,0.35884375,64000
+zoo,strict,overall,missing_nodes,2977,0.046515625,64000
+zoo,strict,overall,value_mismatch,6474,0.10115625,64000
+zoo,strict,overall,answer_mismatch,4826,0.07540625,64000
+zoo,strict,overall,unparseable,0,0.0,64000
+teachers,base,edge (op 12-14),correct,8277,0.3233203125,25600
+teachers,base,edge (op 12-14),dependency_mismatch,16331,0.6379296875,25600
+teachers,base,edge (op 12-14),missing_nodes,5227,0.2041796875,25600
+teachers,base,edge (op 12-14),value_mismatch,12387,0.4838671875,25600
+teachers,base,edge (op 12-14),answer_mismatch,10667,0.4166796875,25600
+teachers,base,edge (op 12-14),unparseable,0,0.0,25600
+teachers,base,hard (op 16-20),correct,4479,0.116640625,38400
+teachers,base,hard (op 16-20),dependency_mismatch,33233,0.8654427083333334,38400
+teachers,base,hard (op 16-20),missing_nodes,17882,0.46567708333333335,38400
+teachers,base,hard (op 16-20),value_mismatch,30447,0.792890625,38400
+teachers,base,hard (op 16-20),answer_mismatch,26582,0.6922395833333334,38400
+teachers,base,hard (op 16-20),unparseable,0,0.0,38400
+teachers,base,overall,correct,12756,0.1993125,64000
+teachers,base,overall,dependency_mismatch,49564,0.7744375,64000
+teachers,base,overall,missing_nodes,23109,0.361078125,64000
+teachers,base,overall,value_mismatch,42834,0.66928125,64000
+teachers,base,overall,answer_mismatch,37249,0.582015625,64000
+teachers,base,overall,unparseable,0,0.0,64000
+teachers,outcome,edge (op 12-14),correct,11848,0.4628125,25600
+teachers,outcome,edge (op 12-14),dependency_mismatch,13012,0.50828125,25600
+teachers,outcome,edge (op 12-14),missing_nodes,4131,0.1613671875,25600
+teachers,outcome,edge (op 12-14),value_mismatch,7100,0.27734375,25600
+teachers,outcome,edge (op 12-14),answer_mismatch,5711,0.2230859375,25600
+teachers,outcome,edge (op 12-14),unparseable,0,0.0,25600
+teachers,outcome,hard (op 16-20),correct,11311,0.29455729166666667,38400
+teachers,outcome,hard (op 16-20),dependency_mismatch,26166,0.68140625,38400
+teachers,outcome,hard (op 16-20),missing_nodes,11561,0.30106770833333335,38400
+teachers,outcome,hard (op 16-20),value_mismatch,18340,0.47760416666666666,38400
+teachers,outcome,hard (op 16-20),answer_mismatch,15555,0.405078125,38400
+teachers,outcome,hard (op 16-20),unparseable,0,0.0,38400
+teachers,outcome,overall,correct,23159,0.361859375,64000
+teachers,outcome,overall,dependency_mismatch,39178,0.61215625,64000
+teachers,outcome,overall,missing_nodes,15692,0.2451875,64000
+teachers,outcome,overall,value_mismatch,25440,0.3975,64000
+teachers,outcome,overall,answer_mismatch,21266,0.33228125,64000
+teachers,outcome,overall,unparseable,0,0.0,64000
+teachers,mix_0.5_0.5,edge (op 12-14),correct,12709,0.4964453125,25600
+teachers,mix_0.5_0.5,edge (op 12-14),dependency_mismatch,12356,0.48265625,25600
+teachers,mix_0.5_0.5,edge (op 12-14),missing_nodes,3052,0.11921875,25600
+teachers,mix_0.5_0.5,edge (op 12-14),value_mismatch,6795,0.2654296875,25600
+teachers,mix_0.5_0.5,edge (op 12-14),answer_mismatch,5294,0.206796875,25600
+teachers,mix_0.5_0.5,edge (op 12-14),unparseable,0,0.0,25600
+teachers,mix_0.5_0.5,hard (op 16-20),correct,12284,0.3198958333333333,38400
+teachers,mix_0.5_0.5,hard (op 16-20),dependency_mismatch,25615,0.6670572916666667,38400
+teachers,mix_0.5_0.5,hard (op 16-20),missing_nodes,9527,0.24809895833333334,38400
+teachers,mix_0.5_0.5,hard (op 16-20),value_mismatch,18339,0.477578125,38400
+teachers,mix_0.5_0.5,hard (op 16-20),answer_mismatch,15367,0.4001822916666667,38400
+teachers,mix_0.5_0.5,hard (op 16-20),unparseable,0,0.0,38400
+teachers,mix_0.5_0.5,overall,correct,24993,0.390515625,64000
+teachers,mix_0.5_0.5,overall,dependency_mismatch,37971,0.593296875,64000
+teachers,mix_0.5_0.5,overall,missing_nodes,12579,0.196546875,64000
+teachers,mix_0.5_0.5,overall,value_mismatch,25134,0.39271875,64000
+teachers,mix_0.5_0.5,overall,answer_mismatch,20661,0.322828125,64000
+teachers,mix_0.5_0.5,overall,unparseable,0,0.0,64000
+teachers,mix_0.2_0.8,edge (op 12-14),correct,12524,0.48921875,25600
+teachers,mix_0.2_0.8,edge (op 12-14),dependency_mismatch,12583,0.4915234375,25600
+teachers,mix_0.2_0.8,edge (op 12-14),missing_nodes,3444,0.13453125,25600
+teachers,mix_0.2_0.8,edge (op 12-14),value_mismatch,6961,0.2719140625,25600
+teachers,mix_0.2_0.8,edge (op 12-14),answer_mismatch,5487,0.2143359375,25600
+teachers,mix_0.2_0.8,edge (op 12-14),unparseable,0,0.0,25600
+teachers,mix_0.2_0.8,hard (op 16-20),correct,12303,0.320390625,38400
+teachers,mix_0.2_0.8,hard (op 16-20),dependency_mismatch,25640,0.6677083333333333,38400
+teachers,mix_0.2_0.8,hard (op 16-20),missing_nodes,10582,0.27557291666666667,38400
+teachers,mix_0.2_0.8,hard (op 16-20),value_mismatch,18520,0.4822916666666667,38400
+teachers,mix_0.2_0.8,hard (op 16-20),answer_mismatch,15545,0.40481770833333336,38400
+teachers,mix_0.2_0.8,hard (op 16-20),unparseable,0,0.0,38400
+teachers,mix_0.2_0.8,overall,correct,24827,0.387921875,64000
+teachers,mix_0.2_0.8,overall,dependency_mismatch,38223,0.597234375,64000
+teachers,mix_0.2_0.8,overall,missing_nodes,14026,0.21915625,64000
+teachers,mix_0.2_0.8,overall,value_mismatch,25481,0.398140625,64000
+teachers,mix_0.2_0.8,overall,answer_mismatch,21032,0.328625,64000
+teachers,mix_0.2_0.8,overall,unparseable,0,0.0,64000
+teachers,strict,edge (op 12-14),correct,12591,0.4918359375,25600
+teachers,strict,edge (op 12-14),dependency_mismatch,12480,0.4875,25600
+teachers,strict,edge (op 12-14),missing_nodes,3737,0.1459765625,25600
+teachers,strict,edge (op 12-14),value_mismatch,7149,0.2792578125,25600
+teachers,strict,edge (op 12-14),answer_mismatch,5788,0.22609375,25600
+teachers,strict,edge (op 12-14),unparseable,0,0.0,25600
+teachers,strict,hard (op 16-20),correct,11883,0.309453125,38400
+teachers,strict,hard (op 16-20),dependency_mismatch,26080,0.6791666666666667,38400
+teachers,strict,hard (op 16-20),missing_nodes,13317,0.346796875,38400
+teachers,strict,hard (op 16-20),value_mismatch,19976,0.5202083333333334,38400
+teachers,strict,hard (op 16-20),answer_mismatch,17083,0.4448697916666667,38400
+teachers,strict,hard (op 16-20),unparseable,0,0.0,38400
+teachers,strict,overall,correct,24474,0.38240625,64000
+teachers,strict,overall,dependency_mismatch,38560,0.6025,64000
+teachers,strict,overall,missing_nodes,17054,0.26646875,64000
+teachers,strict,overall,value_mismatch,27125,0.423828125,64000
+teachers,strict,overall,answer_mismatch,22871,0.357359375,64000
+teachers,strict,overall,unparseable,0,0.0,64000

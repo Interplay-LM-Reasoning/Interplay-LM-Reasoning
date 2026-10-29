@@ -1,0 +1,24 @@
+# Evaluation-only stack for E4 — HARD-PINNED known-good matrix.
+#
+# Why pinned: vllm 0.10.1.1 declares `transformers>=4.55.0` with NO upper bound,
+# but its tokenizer layer uses the transformers-4.x API (all_special_tokens_extended),
+# which transformers 5.x removed. An unpinned resolve on 2026-10-25 pulled
+# transformers 5.20.2 and crashed vLLM engine init on the GPU node.
+#
+# Matrix (verified against PyPI metadata):
+#   vllm 0.10.1.1      -> torch==2.7.1 (cu126), numpy (numba caps it <2.3),
+#                          transformers>=4.55.0, tokenizers>=0.21.1
+#   transformers 4.55.2 -> tokenizers>=0.21,<0.22, huggingface-hub>=0.34,<1.0
+# Authors ran: Python 3.12, torch 2.7.1+cu128, vllm 0.10.1.1.
+
+vllm==0.10.1.1
+transformers==4.55.2
+tokenizers>=0.21.1,<0.22
+huggingface_hub[cli]>=0.34,<1.0
+safetensors>=0.4.3
+numpy>=2.0,<2.3
+tqdm>=4.66
+
+# Analysis / plotting (CPU side)
+pandas>=2.2,<3
+matplotlib>=3.8,<4
